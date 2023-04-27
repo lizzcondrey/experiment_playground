@@ -16,5 +16,5 @@ jobs:
           ref: ${{github.ref}}
       - name: Get Commit Messages
         run: |
-         commit_messages=$(git log | git shortlog --maxcount=15)
-         echo "pulled commits: ${commit_messages}"
+          #commit_messages=$(git log | git shortlog --max-count=15)
+          echo "pulled commits: $(git log | git shortlog --max-count=15)"
