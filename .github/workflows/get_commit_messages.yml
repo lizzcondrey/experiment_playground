@@ -13,8 +13,8 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          ref: ${{github.ref}}
+          ref: ${{github.event.pull_request.head}}
       - name: Get Commit Messages
         run: |
-         commit_messages=$(git log | git shortlog --maxcount=15)
+         commit_messages=$(git log) # | git shortlog --maxcount=15)
          echo "pulled commits: ${commit_messages}"
