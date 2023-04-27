@@ -1,0 +1,22 @@
+name: Notify on Pull Request
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  send_notification:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+        #  ref: ${{github.event.after}}
+      - name: Get Commit Messages
+        run: |
+         commit_messages=$(git shortlog)
+         echo "pulled commits: ${commit_messages}"
+      #- name: Echo commit message
+       # run: echo "Commit SHA: ${{github.event.after}}, commit message: ${{env.COMMIT_MESSAGE}} (or ${COMMIT_MESSAGE})"
