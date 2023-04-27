@@ -3,6 +3,12 @@ Please include a summary of the changes and the related issue. List any dependen
 
 Suggested summary content leverages the following commit messages:
 
+# Linked Items:
+Please include the associated items of this Pull Request using the following syntax to link them for closure on completion of this Pull Request.
+
+`Closes #<Issue Number>`
+`Fixes #<Issue Number>`
+`Resolves #<Issue Number>`
 ## Type of change
 - [ ] New feature (non-breaking change which adds functionality)
 - [ ] Bug fix (non-breaking change which fixes an issue)
