@@ -1,20 +1,20 @@
 # Description
-Please include a summary of the changes and the related issue. Please also include relevant motivation and context. List any dependencies that are required for this change.
+Please include a summary of the changes and the related issue. List any dependencies that are required for this change.
+
+Suggested summary content leverages the following commit messages:
 
 ## Type of change
-- [ ] Bug fix (non-breaking change which fixes an issue)
 - [ ] New feature (non-breaking change which adds functionality)
+- [ ] Bug fix (non-breaking change which fixes an issue)
 - [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
 - [ ] This change requires a documentation update
 
 # Checklist:
-- [ ] My code follows the style guidelines of this project
-- [ ] I have performed a self-review of my code
-- [ ] I have commented my code
-- [ ] I have made corresponding changes to the documentation
+- [ ] Code follows the style guidelines of this project
+- [ ] Code is commented (at minimum new code, but if legacy code is missing comments try to update.)
+- [ ] Updated documentation accordingly
 - [ ] My changes generate no new warnings
-- [ ] I have added tests that prove my fix is effective or that my feature works
-- [ ] New and existing unit tests pass locally with my changes
-- [ ] Any dependent changes have been merged and published in downstream modules
+- [ ] Have updated unit tests accordingly, new and existing
+- [ ] Unit tests pass locally
 - [ ] Pipeline completes and passes all stages
 
