@@ -33,7 +33,6 @@ Include pertinent changes that qualify as breaking changes. Be sure to include i
 Include pertinent changes that are improvements to existing features.
 - None
 
-
 # Checklist:
 - [ ] Code follows the style guidelines of this project
 - [ ] Code is commented (at minimum new code, but if legacy code is missing comments try to update.)
