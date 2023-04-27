@@ -2,6 +2,7 @@
 Please include a summary of the changes and the related issue. List any dependencies that are required for this change.
 
 Suggested summary content leverages the following commit messages:
+`Goal to have extracted commit messages go here`
 
 ## Type of change
 - [ ] New feature (non-breaking change which adds functionality)
