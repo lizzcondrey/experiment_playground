@@ -11,8 +11,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Add other team members
-        run: | 
-          if: ${{ contains(github.actor, 'lizzcondrey') }}
-            echo 'found matching user'
+        if: ${{ contains(github.actor, 'lizzcondrey') }}
+          echo 'found matching user'
           
       
