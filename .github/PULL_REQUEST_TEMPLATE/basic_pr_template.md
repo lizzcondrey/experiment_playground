@@ -10,6 +10,7 @@ Please include the associated items of this Pull Request using the following syn
 `Closes #<Issue Number>`
 `Fixes #<Issue Number>`
 `Resolves #<Issue Number>`
+
 ## Type of change
 - [ ] New feature (non-breaking change which adds functionality)
 - [ ] Bug fix (non-breaking change which fixes an issue)
@@ -41,4 +42,5 @@ Include pertinent changes that are improvements to existing features.
 - [ ] Have updated new and existing unit tests accordingly
 - [ ] Unit tests pass locally
 - [ ] Pipeline completes and passes all stages
+- [ ] Linked associated items to be closed
 
