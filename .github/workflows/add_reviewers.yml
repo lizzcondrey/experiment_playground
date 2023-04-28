@@ -11,9 +11,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Check PR Author
-        run:
-          echo "user- ${{ github.event.pull_request.user.login }}"
-#         if: ${{ contains(github.event.pull_request.user.login, 'lizzcondrey') }}
-#           echo 'found matching user'
+        if: ${{ contains(github.event.pull_request.user.login, 'lizzcondrey') }}
+          echo 'found matching user'
           
       
