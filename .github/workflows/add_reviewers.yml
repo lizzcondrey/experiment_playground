@@ -12,5 +12,5 @@ jobs:
     steps:
       - name: Check PR Author
         run:
-          if: ${{ contains(github.event.pull_request.user.login, 'lizzcondrey') }}
+          if: contains(github.event.pull_request.user.login, 'lizzcondrey')
             echo 'found matching user'
