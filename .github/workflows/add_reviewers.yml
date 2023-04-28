@@ -10,8 +10,10 @@ jobs:
     name: Add Pull Request Reviewers
     runs-on: windows-latest
     steps:
-      - name: Add other team members
-        if: ${{ contains(github.actor, 'lizzcondrey') }}
-          echo 'found matching user'
+      - name: Check PR Author
+        run:
+          echo "user- ${{ github.event.pull_request.user.login }}"
+#         if: ${{ contains(github.event.pull_request.user.login, 'lizzcondrey') }}
+#           echo 'found matching user'
           
       
