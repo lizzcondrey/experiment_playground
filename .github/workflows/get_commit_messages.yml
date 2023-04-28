@@ -17,4 +17,5 @@ jobs:
       - name: Get Commit Messages
         run: |
           #commit_messages=$(git log | git shortlog --max-count=15)
+          echo "branch with commits: ${{github.ref_name}}"
           echo "pulled commits: $(git log | git shortlog --max-count=15)"
