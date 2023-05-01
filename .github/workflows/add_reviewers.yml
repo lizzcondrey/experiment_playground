@@ -13,5 +13,5 @@ jobs:
       - name: Check PR Author
         if: github.event.pull_request.user.login == 'lizzcondrey'
         run:          
-            echo 'found matching user'
+            # echo 'found matching user'
             github.event.pull_request.requested_reviewers: ['lizzcondrey'] 
