@@ -1,12 +1,8 @@
 # Description
 Please include a summary of the changes and the related issue. List any dependencies that are required for this change.
 
-Suggested summary content leverages the following commit messages:
-`Goal to have extracted commit messages go here....might have to drop`
-
 # Linked Items:
 Please include the associated items of this Pull Request using the following syntax to link them for closure on completion of this Pull Request.
-
 `Closes #<Issue Number>`
 `Fixes #<Issue Number>`
 `Resolves #<Issue Number>`
@@ -43,4 +39,3 @@ Include pertinent changes that are improvements to existing features.
 - [ ] Unit tests pass locally
 - [ ] Pipeline completes and passes all stages
 - [ ] Linked associated items to be closed
-
