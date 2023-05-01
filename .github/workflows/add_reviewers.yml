@@ -14,3 +14,4 @@ jobs:
         if: github.event.pull_request.user.login == 'lizzcondrey'
         run:          
             echo 'found matching user'
+            github.event.pull_request.requested_reviewers: ['lizzcondrey'] 
