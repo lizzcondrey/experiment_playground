@@ -25,16 +25,22 @@ def get_element_components(element: ET.Element) -> list[str]:
     element_text = f"text: {element.text} \n"
     element_attribute = f"attribute: {element.attrib} \n"
 
+    return [element_tag, element_text, element_attribute]
+
+
+def sort_element_components(element: ET.Element) -> None:
+    """
+    Helper function for sorting an element's components.
+    """
     if element.tag not in tags:
         tags.append(element.tag)
-
-    if "}type" in str(element.attrib):
-        type_attributes.append(str(element.attrib))
-    
-    if "requirement" in str(element.attrib):
-        requirements.append(str(element.attrib))
-
-    return [element_tag, element_text, element_attribute]
+       
+    for key, value in element.attrib.items():
+        if "}type" in key:
+            type_attributes.append(element.attrib[key])
+   
+        if "Requirement" in value:
+            requirements.append(f"{key}: {value}")
 
 
 def add_root_elements(root: ET.Element) -> None:
@@ -43,6 +49,7 @@ def add_root_elements(root: ET.Element) -> None:
     and append it to the file.
     """
     root_elements = get_element_components(root)
+    sort_element_components(root)
     xml_dump.write("root data \n")
     xml_dump.writelines(root_elements)
 
@@ -55,6 +62,7 @@ def add_node_elements(root: ET.Element) -> None:
     xml_dump.write("node data \n")
     for node in root:
         node_elements = get_element_components(node)
+        sort_element_components(node)
         xml_dump.writelines(node_elements)
 
 
@@ -66,6 +74,7 @@ def add_node_children_elements(node: ET.Element) -> None:
     xml_dump.write("node children data \n")
     for child in node.iter():
         child_elements = get_element_components(child)
+        sort_element_components(child)
         xml_dump.writelines(child_elements)
 
 
