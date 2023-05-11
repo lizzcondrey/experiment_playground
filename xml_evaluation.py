@@ -90,43 +90,51 @@ def add_node_children_elements(node: ET.Element) -> None:
         xml_dump.writelines(child_elements)
 
 
+def add_parsed_components(component_type: str, components_list: list) -> None:
+    """
+    Method to add parsed components to pertinent file.
+    """
+    components_list.sort()
+    for list_entry in components_list:
+        exec(f"{component_type}_dump.write(f'{list_entry} \\n')")
+    
+    exec(f"{component_type}_dump.close()")
+
+
 # Adding elements to xml parse file
 root_elements = add_root_elements(root)
 node_elements = add_node_elements(root)
 for node in root:
     node_children_elements = add_node_children_elements(node)
 
-# Adding high importance parsed components to their pertinent files
-def add_parsed_components(components_list: list) -> None:
-    """
-    Method to add parsed components to pertinent file.
-    """
-    components_list.sort()
-    for list_entry in components_list:
-        component_dump.write(f"{list_entry} \n")
+add_parsed_components("tags", tags)
+add_parsed_components("types", type_attributes)
+add_parsed_components("requirements", requirements)
+add_parsed_components("ids", element_ids)
+add_parsed_components("attributes", attributes)
 
-tags.sort()
-for tag in tags:
-    tags_dump.write(f"{tag} \n")
+# tags.sort()
+# for tag in tags:
+#     tags_dump.write(f"{tag} \n")
 
-for type_attribute in type_attributes:
-    types_dump.write(f"{type_attribute} \n")
+# for type_attribute in type_attributes:
+#     types_dump.write(f"{type_attribute} \n")
 
-for requirement in requirements:
-    requirements_dump.write(f"{requirement} \n")
+# for requirement in requirements:
+#     requirements_dump.write(f"{requirement} \n")
 
-for element_id in element_ids:
-    ids_dump.write(f"{element_id} \n")
+# for element_id in element_ids:
+#     ids_dump.write(f"{element_id} \n")
 
-attributes.sort()
-for attribute in attributes:
-    attributes_dump.write(f"{attribute} \n")
+# attributes.sort()
+# for attribute in attributes:
+#     attributes_dump.write(f"{attribute} \n")
 
 # Closing parsed data files
-xml_dump.close()
-tags_dump.close()
-types_dump.close()
-requirements_dump.close()
-ids_dump.close()
+# xml_dump.close()
+# tags_dump.close()
+# types_dump.close()
+# requirements_dump.close()
+# ids_dump.close()
 
 print("finished processing nodes and node children")
