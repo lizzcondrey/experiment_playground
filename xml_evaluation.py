@@ -8,12 +8,16 @@ root = tree.getroot()
 tags = []
 type_attributes = []
 requirements = []
+element_ids = []
+attributes = []
 
 # Files for storing parsed data
 xml_dump = open("xml_dump.txt", "w")
 tags_dump = open("tags_dump.txt", "w")
 types_dump = open("types_dump.txt", "w")
 requirements_dump = open("requirements_dump.txt", "w")
+ids_dump = open("ids_dump.txt", "w")
+attributes_dump = open("attributes_dump.txt", "w")
 
 
 def get_element_components(element: ET.Element) -> list[str]:
@@ -31,16 +35,24 @@ def get_element_components(element: ET.Element) -> list[str]:
 def sort_element_components(element: ET.Element) -> None:
     """
     Helper function for sorting an element's components.
+    Generates list entries of key value pairs with the key being the
+    original element and pertinent value
     """
     if element.tag not in tags:
         tags.append(element.tag)
-       
+
     for key, value in element.attrib.items():
-        if "}type" in key:
-            type_attributes.append(element.attrib[key])
-   
+        if "type" in key:
+            type_attributes.append(f"{element}: {element.attrib[key]}")
+        
         if "Requirement" in value:
-            requirements.append(f"{key}: {value}")
+            requirements.append(f"{element}: {value}")
+
+        if "id" in key:
+            element_ids.append(f"{element}: {element.attrib[key]}")
+    
+        if key not in attributes:
+            attributes.append(f"{element}: {key}")
 
 
 def add_root_elements(root: ET.Element) -> None:
@@ -81,22 +93,40 @@ def add_node_children_elements(node: ET.Element) -> None:
 # Adding elements to xml parse file
 root_elements = add_root_elements(root)
 node_elements = add_node_elements(root)
-
 for node in root:
     node_children_elements = add_node_children_elements(node)
 
-# Adding high importance parsed components to thier pertinent files
+# Adding high importance parsed components to their pertinent files
+def add_parsed_components(components_list: list) -> None:
+    """
+    Method to add parsed components to pertinent file.
+    """
+    components_list.sort()
+    for list_entry in components_list:
+        component_dump.write(f"{list_entry} \n")
+
+tags.sort()
 for tag in tags:
     tags_dump.write(f"{tag} \n")
+
 for type_attribute in type_attributes:
     types_dump.write(f"{type_attribute} \n")
+
 for requirement in requirements:
     requirements_dump.write(f"{requirement} \n")
+
+for element_id in element_ids:
+    ids_dump.write(f"{element_id} \n")
+
+attributes.sort()
+for attribute in attributes:
+    attributes_dump.write(f"{attribute} \n")
 
 # Closing parsed data files
 xml_dump.close()
 tags_dump.close()
 types_dump.close()
 requirements_dump.close()
+ids_dump.close()
 
 print("finished processing nodes and node children")
