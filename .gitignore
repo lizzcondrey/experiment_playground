@@ -2,6 +2,7 @@
 .vscode/
 .project
 .settings/
+.venv/
 
 # text files
 *.txt 

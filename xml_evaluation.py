@@ -11,7 +11,8 @@ xml_dump = open("xml_dump4.txt", "w")
 
 def get_element_components(element: ET.Element) -> list[str]:
     """
-    Helper function for getting the element's tag, text, and attribute from the XML.
+    Helper function for getting the element's tag, text, and attribute from
+    the XML.
     """
     element_tag = f"tag: {element.tag} \n"
     element_text = f"text: {element.text} \n"
@@ -36,7 +37,6 @@ def add_root_elements(root: ET.Element) -> None:
     xml_dump.writelines(root_elements)
 
 
-
 def add_node_elements(root: ET.Element) -> None:
     """
     Method to take the returned tag, text, and attribute of the node element
@@ -50,8 +50,8 @@ def add_node_elements(root: ET.Element) -> None:
 
 def add_node_children_elements(node: ET.Element) -> None:
     """
-    Method to take the returned tag, text, and attribute of a node child element
-    and append it to the file.
+    Method to take the returned tag, text, and attribute of a node child
+    element and append it to the file.
     """
     for child in node.iter():
         child_elements = get_element_components(child)
