@@ -1,0 +1,10 @@
+# IDE/Editor files
+.vscode/
+.project
+.settings/
+
+# text files
+*.txt 
+
+# xml files
+*.xml
