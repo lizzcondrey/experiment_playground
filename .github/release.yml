@@ -1,7 +1,4 @@
 changelog:
-  exclude:
-    labels:
-      - abc
   categorgies:
     - title: Breaking Changes
       labels:
