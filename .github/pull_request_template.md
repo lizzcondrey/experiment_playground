@@ -32,7 +32,6 @@ Include pertinent changes that are improvements to existing features.
 
 # Checklist:
 - [ ] Code follows the style guidelines of this project
-- [ ] Code is commented (at minimum new code, but if legacy code is missing comments try to update.)
 - [ ] Updated documentation accordingly
 - [ ] My changes generate no new warnings
 - [ ] Have updated new and existing unit tests accordingly
