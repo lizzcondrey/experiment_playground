@@ -4,3 +4,4 @@ Area for experimenting with automation capabilities, github features, and new li
 ## Current Experiments
 - PR Temaplates
 - XML/XMI Processing
+- Change log generation
