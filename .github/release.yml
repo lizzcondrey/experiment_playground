@@ -12,7 +12,9 @@ changelog:
       labels:
         - bug
         - funky
-    - title: Other Changes
+    - title: Documentation Updates
       labels:
         - documentation
+    - title: Other Changes
+      labels:
         - "*"
