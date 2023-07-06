@@ -1,20 +1,21 @@
 changelog:
   categorgies:
-    - title: Breaking Changes
+    - title: 'Breaking Changes'
       labels:
-        - breaking
-        - busted
-    - title: New Features
+        - 'breaking'
+        - 'busted'
+    - title: 'New Features'
       labels:
-        - feature
-        - enhancement
-    - title: Bug Fixes
+        - 'feature'
+        - 'enhancement'
+    - title: 'Bug Fixes'
       labels:
-        - bug
-        - funky
-    - title: Documentation Updates
+        - 'bug'
+        - 'funky'
+        - 'Semver-Patch'
+    - title: 'Documentation Updates'
       labels:
-        - documentation
-    - title: Other Changes
+        - 'documentation'
+    - title: 'Other Changes'
       labels:
         - "*"
