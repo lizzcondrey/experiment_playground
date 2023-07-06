@@ -1,0 +1,20 @@
+changelog:
+  exclude:
+    labels:
+      - abc
+  categorgies:
+    - title: Breaking Changes
+      labels:
+        - breaking
+        - busted
+    - title: New Features
+      labels:
+        - feature
+        - flashy
+    - title: Bug Fixes
+      labels:
+        - bug
+        - funky
+    - title: Other Changes
+      labels:
+        - "*"
