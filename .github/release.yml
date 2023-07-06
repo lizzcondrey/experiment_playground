@@ -10,7 +10,7 @@ changelog:
     - title: New Features
       labels:
         - feature
-        - flashy
+        - enhancement
     - title: Bug Fixes
       labels:
         - bug
