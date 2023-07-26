@@ -113,7 +113,7 @@ html_theme_options = {}
 # If given, this must be the name of an image file (path relative to the
 # configuration directory) that is the favicon of the docs, or URL that 
 # points an image file for the favicon.
-html_favicon = ["favicon.ico"]
+html_favicon = "favicon.ico"
 
 
 # Add any paths that contain custom static files (such as style sheets) here,
