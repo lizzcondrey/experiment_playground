@@ -12,13 +12,13 @@
 
 import os
 import sys
+from datetime import date
 from importlib import metadata
 
 sys.path.insert(0, os.path.abspath("."))
 
 
 # -- Project information -----------------------------------------------------
-from datetime import date
 
 project = "Architecture-as-Code"
 copyright = f"2021 - {str(date.today().year)} , AaC Project Contributors"
