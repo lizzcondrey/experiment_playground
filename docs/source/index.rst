@@ -11,13 +11,6 @@
    Plugins <project_documentation/plugins/index>
    VSCode Extension <project_documentation/vscode_extension/index>
 
-.. toctree::
-   :maxdepth: 3
-   :caption: API Documentation
-   :hidden:
-
-   api
-
 
 Indices and tables
 ------------------
