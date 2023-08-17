@@ -38,7 +38,7 @@ body:
     attributes:
       label: "Reproduction steps"
       value: |
-      Please enter an explicit description of your issue
+        Please enter an explicit description of your issue
         1. Go to '...'
         2. Click on '....'
         3. Scroll down to '....'
