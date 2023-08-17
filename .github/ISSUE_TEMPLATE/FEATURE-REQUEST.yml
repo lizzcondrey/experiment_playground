@@ -31,7 +31,6 @@ body:
     id: drawbacks
     attributes:
       label: "What are the drawbacks/impacts of your feature request?"
-      description: 
       placeholder: Identify the drawbacks and impacts while being neutral on your feature request.
     validations:
       required: true
