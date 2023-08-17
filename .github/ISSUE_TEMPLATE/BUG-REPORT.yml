@@ -27,16 +27,14 @@ body:
     validations:
       required: true
   - type: input
-    id: reprod-url
+    id: reproduction-url
     attributes:
       label: "Reproduction URL"
-      placeholder: | 
-      Please enter your GitHub URL to provide a reproduction of the issue
-      ex. https://github.com/USERNAME/REPO-NAME
+      placeholder: ex. https://github.com/USERNAME/REPO-NAME
     validations:
       required: true
   - type: textarea
-    id: reprod
+    id: reproduction-steps
     attributes:
       label: "Reproduction steps"
       value: |
