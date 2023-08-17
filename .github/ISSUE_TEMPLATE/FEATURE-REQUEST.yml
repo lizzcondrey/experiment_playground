@@ -6,7 +6,7 @@ labels: [
   "enhancement"
 ]
 projects: [
-  "lizzcondrey/experiment_playground"
+  "lizzcondrey/Experiment Playground"
 ]
 body:
   - type: textarea
