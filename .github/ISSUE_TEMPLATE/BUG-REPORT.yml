@@ -17,8 +17,8 @@ body:
         # required: true
       - label: I checked to make sure that this issue has not already been filed.
         # required: true
-      validations:
-        required: true
+    validations:
+      required: true
   - type: textarea
     id: description
     attributes:
