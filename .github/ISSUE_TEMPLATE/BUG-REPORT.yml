@@ -5,7 +5,7 @@ labels: [
   "bug"
 ]
 projects: [
-  "lizzcondrey/Experiment Playground"
+  "lizzcondrey/Projects/Experiment Playground"
 ]
 body:
   - type: checkboxes
