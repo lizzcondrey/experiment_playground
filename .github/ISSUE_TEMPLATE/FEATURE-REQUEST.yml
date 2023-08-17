@@ -5,6 +5,9 @@ labels: [
   "question", 
   "enhancement"
 ]
+projects: [
+  "jondavid-black/AaC"
+]
 body:
   - type: textarea
     id: reference_issues
