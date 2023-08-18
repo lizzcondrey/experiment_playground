@@ -24,7 +24,9 @@ body:
     id: documentation
     attributes:
       label: "Requested Documentation"
-      placeholder: Describe in a few lines your documentation request.
+      placeholder: |
+        Describe in a few lines your documentation request.
+        If an expansion or correction, please include the existing documentation reference.
     validations:
       required: true
   - type: textarea
