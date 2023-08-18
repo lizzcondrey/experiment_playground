@@ -6,7 +6,7 @@ labels: [
   "enhancement"
 ]
 projects: [
-  "lizzcondrey/Experiment Playground"
+  "lizzcondrey/Projects/Experiment Playground"
 ]
 body:
   - type: checkboxes
