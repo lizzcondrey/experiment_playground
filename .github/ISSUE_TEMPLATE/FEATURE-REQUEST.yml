@@ -1,6 +1,6 @@
-name: "💭  Feature Request"
+name: "💭 Feature Request"
 description: Create a new ticket for a new feature request
-title: "💭  [REQUEST] - <title>"
+title: "💭 [REQUEST] - <title>"
 labels: [
   "question", 
   "enhancement"
@@ -9,6 +9,14 @@ projects: [
   "lizzcondrey/Experiment Playground"
 ]
 body:
+  - type: checkboxes
+    id: feature_area
+    attributes:
+      label: "Feature Area"
+      description: "Please select which development area your feature request pertains to."
+      options:
+        - label: Python CLI tool
+        - label: VS Code Extension
   - type: textarea
     id: reference_issues
     attributes:
