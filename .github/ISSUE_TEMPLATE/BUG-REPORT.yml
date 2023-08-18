@@ -12,7 +12,7 @@ body:
     id: pre-requistes
     attributes:
       label: "Pre-requisites"
-      description: Please answer the following questions for yourself before submitting an issue.
+      description: Please answer the following questions before submitting an issue.
       options:
       - label: I am running the latest version.
         required: true
