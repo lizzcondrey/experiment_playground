@@ -21,7 +21,7 @@ body:
     id: reference_issues
     attributes:
       label: "Reference Issues"
-      placeholder: "#<Issues IDs>"
+      placeholder: "Please include any related #<Issue IDs>"
     validations:
       required: false
   - type: textarea
