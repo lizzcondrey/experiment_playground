@@ -38,7 +38,7 @@ jobs:
           # Required mail subject:
           subject: Github Actions job result
           # Required recipients' addresses:
-          to: ashley.condry@ngc.com
+          to: c3lt1c.pr1nc3ss.13@gmail.com
           # Required sender full name (address can be skipped):
           from: Lizz Condrey # <user@example.com>
           # Optional plain body:
