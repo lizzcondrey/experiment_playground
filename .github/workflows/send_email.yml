@@ -42,7 +42,7 @@ jobs:
           # Required sender full name (address can be skipped):
           from: ${{ secrets.MAIL_USERNAME }} # <user@example.com>
           # Optional plain body:
-          body: New Release ${{ github.release.tag_name }} for ${{ github.repository }} has published successfully!
+          body: New Release ${{ github.event.release.tag_name }} for ${{ github.repository }} has published successfully!
           # Optional HTML body read from file:
           #  html_body:
           # Optional carbon copy recipients:
