@@ -1,8 +1,8 @@
 name: Release Available Notice
 on:
   # Automated runs
-  push:
-    branches: [$default-branch]
+  release:
+    types: [published]
 
   # Manual runs
   workflow_dispatch:
@@ -42,7 +42,7 @@ jobs:
           # Required sender full name (address can be skipped):
           from: ${{ secrets.MAIL_USERNAME }} # <user@example.com>
           # Optional plain body:
-          body: Build job of ${{ github.repository }} completed successfully!
+          body: New Release ${{ github.release.tag_name }} for ${{ github.repository }} has published successfully!
           # Optional HTML body read from file:
           #  html_body:
           # Optional carbon copy recipients:
@@ -58,6 +58,6 @@ jobs:
           # Optional converting Markdown to HTML (set content_type to text/html too):
           convert_markdown: true
           # Optional attachments:
-          attachments:
+          # attachments:
           # Optional priority: 'high', 'normal' (default) or 'low'
           priority: low
