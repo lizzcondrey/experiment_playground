@@ -22,42 +22,26 @@ jobs:
           #
           #  * smtp://user:password@server:port
           #  * smtp+starttls://user:password@server:port
-          # connection_url: ${{secrets.MAIL_CONNECTION}}
+          connection_url: smtp+starttls://${{ secrets.MAIL_USERNAM}}:${{ secrets.MAIL_APP_PASSWORD}}@${{secrets.MAIL_CONNECTION}}
           # Required mail server address if not connection_url:
-          # server_address: outlook.office365.com
-          server_address: smtp.gmail.com
+          # server_address: smtp.gmail.com
           # Server port, default 25:
-          # server_port: 993
-          server_port: 465
+          # server_port: 465
           # Optional whether this connection use TLS (default is true if server_port is 465)
-          secure: true
+          # secure: true
           # Optional (recommended) mail server username:
-          username: ${{ secrets.MAIL_USERNAME }}
+          # username: ${{ secrets.MAIL_USERNAME }}
           # Optional (recommended) mail server password:
-          password: ${{ secrets.MAIL_APP_PASSWORD }}
+          # password: ${{ secrets.MAIL_APP_PASSWORD }}
           # Required mail subject:
-          subject: Github Actions Job Result
+          subject: GitHub Release Available
           # Required recipients' addresses:
           to: ashley.condrey@ngc.com
           # Required sender full name (address can be skipped):
           from: ${{ secrets.MAIL_USERNAME }} # <user@example.com>
           # Optional plain body:
           body: New Release ${{ github.event.release.tag_name }} for ${{ github.repository }} has published successfully!
-          # Optional HTML body read from file:
-          #  html_body:
-          # Optional carbon copy recipients:
-          # cc:
-          # Optional blind carbon copy recipients:
-          # bcc:
-          # Optional recipient of the email response:
-          # reply_to:
-          # Optional Message ID this message is replying to:
-          # in_reply_to:
-          # Optional unsigned/invalid certificates allowance:
-          # ignore_cert: true
           # Optional converting Markdown to HTML (set content_type to text/html too):
           convert_markdown: true
-          # Optional attachments:
-          # attachments:
           # Optional priority: 'high', 'normal' (default) or 'low'
           priority: low
