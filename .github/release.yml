@@ -2,17 +2,25 @@
 
 changelog:
   categories:
-    - title: Breaking Changes 🛠
+    - title: Added 🎉
       labels:
-        - breaking
-    - title: Exciting New Features 🎉
+        - added
+    - title: Changed 🛠
       labels:
-        - enhancement
-    - title: Bug Fixes
+        - changed
+    - title: Deprecated
       labels:
-        - bug
-        - funky
-    - title: Documentation Changes
+        - deprecated
+    - title: Removed
+      labels:
+        - removed
+    - title: Fixed
+      labels:
+        - fixed
+    - title: Security
+      labels: 
+        - security
+    - title: Documentation
       labels:
         - documentation
     - title: Other Changes
