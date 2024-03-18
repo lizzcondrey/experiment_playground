@@ -12,7 +12,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Update project fields
-        uses: EndBug/project-fields@v2
+        uses: EndBug/project-fields@v2.0.2
         with:
           operation: set
           fields: Status
@@ -29,7 +29,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Update project fields
-        uses: EndBug/project-fields@v2
+        uses: EndBug/project-fields@v2.0.2
         with:
           operation: set
           fields: Status
@@ -38,19 +38,19 @@ jobs:
           resource_url: https://github.com/my-user/repo/pull/${{ github.event.pull_request.number }}
           values: In Review
           
-  project-pr-re-review:
-    if: ${{ github.event.pull_request.review_requested }}
-    name: Update Project Item PR In Review For Re-Review
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-      - name: Update project fields
-        uses: EndBug/project-fields@v2
-        with:
-          operation: set
-          fields: Status
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          project_url: https://github.com/orgs/experiment-playground/projects/1
-          resource_url: https://github.com/my-user/repo/pull/${{ github.event.pull_request.number }}
-          values: In Review
+  # project-pr-re-review:
+  #   if: ${{ github.event.pull_request_review_thread. }}
+  #   name: Update Project Item PR In Review For Re-Review
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout repository
+  #       uses: actions/checkout@v3
+  #     - name: Update project fields
+  #       uses: EndBug/project-fields@v2.0.2
+  #       with:
+  #         operation: set
+  #         fields: Status
+  #         github_token: ${{ secrets.GITHUB_TOKEN }}
+  #         project_url: https://github.com/orgs/experiment-playground/projects/1
+  #         resource_url: https://github.com/my-user/repo/pull/${{ github.event.pull_request.number }}
+  #         values: In Review
