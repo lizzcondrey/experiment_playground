@@ -9,4 +9,5 @@ Area for experimenting with automation capabilities, github features, and new li
 - Change log generation
     - Template for generating release notes and grouping PRs by tags
 - PR Automation
-    - Trying to automate some of the population of PR fields 
+    - Trying to automate some of the population of PR fields
+    - Trying to automate some of the project board item movements. 
